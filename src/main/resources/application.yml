@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8080}
+  compression:
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+vaadin:
+  compatibilityMode: false
+logging:
+  level:
+    org:
+      atmosphere: warn
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/sample"
+    username: sample_user
+    password: sample_password
