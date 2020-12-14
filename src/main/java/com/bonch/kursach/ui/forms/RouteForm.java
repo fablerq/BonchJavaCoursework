@@ -13,21 +13,24 @@ import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 
 import static com.bonch.kursach.utils.Notifications.errorNotification;
 
+@FieldDefaults(level= AccessLevel.PRIVATE)
 public class RouteForm extends FormLayout {
 
-    private TextField source;
-    private TextField destination;
-    private Route route;
+    TextField source;
+    TextField destination;
+    Route route;
 
-    private Binder<Route> binder;
-    private HorizontalLayout layout;
+    Binder<Route> binder;
+    HorizontalLayout layout;
 
-    private Button save;
-    private Button delete;
-    private Button close;
+    Button save;
+    Button delete;
+    Button close;
 
     public RouteForm() {
         configureElements();

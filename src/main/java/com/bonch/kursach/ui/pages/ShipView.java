@@ -59,7 +59,7 @@ public class ShipView extends Main {
 
 	private void configureGrid() {
 		shipsGrid = new Grid<>(Ship.class);
-		shipsGrid.setColumns("shipId");
+		shipsGrid.setColumns("shipId", "title");
 
 		shipsGrid.addColumn(x -> x.getCountry().getTitle()).setHeader("country");
 		shipsGrid.addColumn(x -> x.getType().getTitle()).setHeader("type");

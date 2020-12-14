@@ -21,11 +21,11 @@ public class TypeService {
                 .collect(Collectors.toList());
     }
 
-    public void save(Type ship) {
-        typeRepository.save(ship);
+    public void save(Type type) {
+        typeRepository.save(type);
     }
 
-    public void delete(Type ship) {
-        typeRepository.delete(ship);
+    public void delete(Type type) {
+        typeRepository.delete(type);
     }
 }

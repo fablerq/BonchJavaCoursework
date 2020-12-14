@@ -15,24 +15,27 @@ import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 
 import java.util.List;
 
 import static com.bonch.kursach.utils.Notifications.errorNotification;
 
+@FieldDefaults(level= AccessLevel.PRIVATE)
 public class LocationForm extends FormLayout {
 
-    private NumberField longitude;
-    private NumberField latitude;
-    private ComboBox<Ship> ship;
-    private Location location;
+    NumberField longitude;
+    NumberField latitude;
+    ComboBox<Ship> ship;
+    Location location;
 
-    private HorizontalLayout layout;
-    private Binder<Location> binder;
+    HorizontalLayout layout;
+    Binder<Location> binder;
 
-    private Button save;
-    private Button delete;
-    private Button close;
+    Button save;
+    Button delete;
+    Button close;
 
     public LocationForm(List<Ship> ships) {
         configureElements(ships);

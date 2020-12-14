@@ -13,20 +13,23 @@ import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 
 import static com.bonch.kursach.utils.Notifications.errorNotification;
 
+@FieldDefaults(level= AccessLevel.PRIVATE)
 public class TypeForm extends FormLayout {
 
-    private TextField title;
-    private Type type;
+    TextField title;
+    Type type;
 
-    private Binder<Type> binder;
-    private HorizontalLayout layout;
+    Binder<Type> binder;
+    HorizontalLayout layout;
 
-    private Button save;
-    private Button delete;
-    private Button close;
+    Button save;
+    Button delete;
+    Button close;
 
     public TypeForm() {
         configureElements();

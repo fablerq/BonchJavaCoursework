@@ -13,3 +13,7 @@ webpack.config.js
 .DS_Store
 restexampleapp.iml
 .idea/
+.gradle/
+build/
+pnpm-lock.yaml
+pnpmfile.js

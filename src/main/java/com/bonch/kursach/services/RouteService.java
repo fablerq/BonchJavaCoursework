@@ -21,12 +21,12 @@ public class RouteService {
                 .collect(Collectors.toList());
     }
 
-    public void save(Route ship) {
-        routeRepository.save(ship);
+    public void save(Route route) {
+        routeRepository.save(route);
     }
 
-    public void delete(Route ship) {
-        routeRepository.delete(ship);
+    public void delete(Route route) {
+        routeRepository.delete(route);
     }
 
 }

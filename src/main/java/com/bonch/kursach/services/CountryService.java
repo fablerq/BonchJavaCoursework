@@ -21,12 +21,12 @@ public class CountryService {
                 .collect(Collectors.toList());
     }
 
-    public void save(Country ship) {
-        countryRepository.save(ship);
+    public void save(Country country) {
+        countryRepository.save(country);
     }
 
-    public void delete(Country ship) {
-        countryRepository.delete(ship);
+    public void delete(Country country) {
+        countryRepository.delete(country);
     }
 
 }

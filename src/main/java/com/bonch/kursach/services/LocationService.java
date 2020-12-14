@@ -21,12 +21,12 @@ public class LocationService {
                 .collect(Collectors.toList());
     }
 
-    public void save(Location ship) {
-        locationRepository.save(ship);
+    public void save(Location location) {
+        locationRepository.save(location);
     }
 
-    public void delete(Location ship) {
-        locationRepository.delete(ship);
+    public void delete(Location location) {
+        locationRepository.delete(location);
     }
 
 }

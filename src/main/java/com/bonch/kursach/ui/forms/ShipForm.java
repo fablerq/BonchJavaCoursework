@@ -17,25 +17,28 @@ import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 
 import java.util.List;
 
 import static com.bonch.kursach.utils.Notifications.errorNotification;
 
+@FieldDefaults(level= AccessLevel.PRIVATE)
 public class ShipForm extends FormLayout {
 
-    private TextField title;
-    private ComboBox<Country> country;
-    private ComboBox<Type> type;
-    private ComboBox<Route> route;
-    private Ship ship;
+    TextField title;
+    ComboBox<Country> country;
+    ComboBox<Type> type;
+    ComboBox<Route> route;
+    Ship ship;
 
-    private HorizontalLayout layout;
-    private Binder<Ship> binder;
+    HorizontalLayout layout;
+    Binder<Ship> binder;
 
-    private Button save;
-    private Button delete;
-    private Button close;
+    Button save;
+    Button delete;
+    Button close;
 
     public ShipForm(List<Country> countries, List<Type> types, List<Route> routes) {
         configureElements(countries, types, routes);

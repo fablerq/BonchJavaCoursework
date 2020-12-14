@@ -13,20 +13,23 @@ import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.shared.Registration;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 
 import static com.bonch.kursach.utils.Notifications.errorNotification;
 
+@FieldDefaults(level= AccessLevel.PRIVATE)
 public class CountryForm extends FormLayout {
 
-    private TextField title;
-    private Country country;
+    TextField title;
+    Country country;
 
-    private Binder<Country> binder;
-    private HorizontalLayout layout;
+    Binder<Country> binder;
+    HorizontalLayout layout;
 
-    private Button save;
-    private Button delete;
-    private Button close;
+    Button save;
+    Button delete;
+    Button close;
 
     public CountryForm() {
         configureElements();
